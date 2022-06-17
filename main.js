@@ -70,7 +70,7 @@ const cardArray = [
   },
   {
     name: 'Multi-Post Stories',
-    image: 'images/fouthCover.png',
+    image: 'images/fouthCover.pnj',
     time: {
       text1: 'CANOPY',
       text2: 'Back-End-Dev',
@@ -152,7 +152,7 @@ const createPopup = (arr, i) => {
   const popupClose = document.createElement('img');
   popupClose.src = 'images/dark-close.png';
   const popupImage = document.createElement('img');
-  popupImage.src = arr[i].image;
+  popupImage.src = arr[i].img;
   const popupContent = document.createElement('div');
   popupContent.className = 'popup-content';
   const popupText = document.createElement('div');
@@ -251,7 +251,7 @@ form.addEventListener('submit', () => {
     email: document.getElementById('email').value,
     message: document.getElementById('message').value,
   };
-  localStorage.setItem('form_inputs', JSON.stringify(inputs));
+  localStorage.setItem('form_inputs', JSON.parse(inputs));
 });
 
 const setInputs = () => {
